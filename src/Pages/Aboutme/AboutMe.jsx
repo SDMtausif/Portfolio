@@ -1,11 +1,11 @@
 import React from 'react'
-import Container from '../Layout/Container'
-import AboutLeft from './Aboutme/AboutLeft'
-import AboutRight from './Aboutme/AboutRight'
+import Container from '../../Layout/Container'
+import AboutLeft from './AboutLeft'
+import AboutRight from './AboutRight'
 const AboutMe = () => {
   return (
     <Container>
-       <div className='flex'>
+       <div className='flex z-50' >
         <AboutLeft/>
         <AboutRight/>
        </div>

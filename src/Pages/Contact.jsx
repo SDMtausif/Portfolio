@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutMe from './AboutMe';
+import AboutMe from './Aboutme/AboutMe';
 
 const Contact = () => {
   return (
