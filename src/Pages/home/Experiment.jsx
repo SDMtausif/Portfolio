@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { div, title } from "motion/react-client";
+
 const data = [
   {
     link:"url",
@@ -9,23 +9,23 @@ const data = [
   },
   {
     link:"url",
-    titles:"Experment 01",
+    titles:"Experment 02",
     name:"loading......",
   },
   {
     link:"url",
-    titles:"Experment 01",
+    titles:"Experment 03",
     name:"loading......",
   },
   {
     link:"url",
-    titles:"Experment 01",
+    titles:"Experment 04",
     name:"loading......",
   }
 ]
 const Experiment = () => {
   return (
-    <section id="experiment"   className="h-screen bg-[#d8d8e17e] py-[100px]">
+    <section id="experiment"   className="h-screen bg-[#d8d8e17e] py-32">
        <h1 className='text-center  text-[12px] text-[#b19386] md-[25px] font-league' >EXPERIMENTS & OPEN SOURCE</h1>
        <p className='text-center text-[#4a4a4a] mb-[70px] text-[22px]'>Web is fun</p>
        <div className='flex justify-center relative  '>
@@ -43,165 +43,25 @@ const Experiment = () => {
          transition={{ duration: 2, ease: "easeInOut" }}
          className="absolute inset-0 bg-[#ff3636]  z-[40]" > 
        </motion.div>
+
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
   {data.map((item, key) => (
-    <a
-      key={key}
-      href={item.link}
-      className="relative block group bg-yellow-100 p-10 overflow-hidden"
-    >
+    <a key={key} href={item.link} className="relative block group bg-gray-200 p-10 overflow-hidden">
       {/* Sliding Overlay */}
-      <div className="absolute inset-0 bg-[#df7e69] opacity-20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-out z-10"></div>
-
-      {/* Content */}
+      <div className="absolute inset-0 bg-[#df7e69] opacity-20 transform -translate-x-full group-hover:translate-x-0 
+          transition-transform duration-700 ease-out z-10"></div>
       <div className="relative z-20 text-center">
-        <img
-          src="https://tse2.mm.bing.net/th/id/OIP.IM24T5ZQAlGULeBZdllTxgHaHu?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-          alt={item.titles}
-          className="w-[236px] h-[236px] mx-auto rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-
-        <h6 className="text-gray-700 font-bold text-[12px] mt-6">
-          {item.titles}
-        </h6>
-
-        <p className="text-[#1c1d25] text-[18px] font-semibold mt-2">
-          {item.name}
-        </p>
-      </div>
-    </a>
-  ))}
-</div>
-      
-    
-
-
-      
-      </div>
+         <img src="" className="w-[240px] h-[240px] mx-auto rounded-full object-cover transition-transform duration-300 
+          group-hover:scale-105"/>
+         <h6 className="text-gray-700 font-bold text-[12px] mt-6">{item.titles}</h6>
+         <p className="text-[#1c1d25] text-[18px] font-semibold mt-2"> {item.name}</p>
+        </div>
+      </a>
+      ))}
+    </div>    
+    </div>
     </section>
   );
 };
 
 export default Experiment;
-
-
-
-      // <a className="bg-gray-100 w-[1fr] h-auto  p-10" >
-      //       <div className="bg-red-600"></div>
-      //       <img src="https://tse2.mm.bing.net/th/id/OIP.IM24T5ZQAlGULeBZdllTxgHaHu?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="" 
-      //        className="w-[236px] h-[236px] rounded-full object-cover transition-transform duration-300 group-hover:scale-105"/>
-      //       <h6 className="text-gray-700 font-bold text-[12px] font-league">Experiment 01</h6>
-      //       <p className="text-[#1c1d25] text-[18px] font-semibold font-libre">Temparatue calculator</p>
-      //     </a>
-      //       <a className="bg-gray-100 w-[1fr] h-auto  p-10" >
-      //       <div className="bg-red-600"></div>
-      //       <img src="https://tse2.mm.bing.net/th/id/OIP.IM24T5ZQAlGULeBZdllTxgHaHu?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="" 
-      //        className="w-[236px] h-[236px] rounded-full object-cover transition-transform duration-300 group-hover:scale-105"/>
-      //       <h6 className="text-gray-700 font-bold text-[12px] font-league">Experiment 01</h6>
-      //       <p className="text-[#1c1d25] text-[18px] font-semibold font-libre">Temparatue calculator</p>
-      //     </a>
-      //       <a className="bg-gray-100 w-[1fr] h-auto  p-10" >
-      //       <div className="bg-red-600"></div>
-      //       <img src="https://tse2.mm.bing.net/th/id/OIP.IM24T5ZQAlGULeBZdllTxgHaHu?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="" 
-      //        className="w-[236px] h-[236px] rounded-full object-cover transition-transform duration-300 group-hover:scale-105"/>
-      //       <h6 className="text-gray-700 font-bold text-[12px] font-league">Experiment 01</h6>
-      //       <p className="text-[#1c1d25] text-[18px] font-semibold font-libre">Temparatue calculator</p>
-      //     </a>
-      //       <a className="bg-gray-100 w-[1fr] h-auto  p-10" >
-      //       <div className="bg-red-600"></div>
-      //       <img src="https://tse2.mm.bing.net/th/id/OIP.IM24T5ZQAlGULeBZdllTxgHaHu?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="" 
-      //        className="w-[236px] h-[236px] rounded-full object-cover transition-transform duration-300 group-hover:scale-105"/>
-      //       <h6 className="text-gray-700 font-bold text-[12px] font-league">Experiment 01</h6>
-      //       <p className="text-[#1c1d25] text-[18px] font-semibold font-libre">Temparatue calculator</p>
-      //     </a>
-          
-
-
-
-
-
-
-
-//    <div className='flex flex-wrap justify-center w-full'>
-
-//        <div className='w-[25%] relative block group  bg-gray-100 px-[60px] pt-[60px] pb-[60px] overflow-hidden'>
-
-//        <a href="https://your-project-url.com">
-//       {/* hover layer */} <div />
-//        <div className="relative z-20">
-//        <div className="flex justify-center">
-//        <img
-//         src="https://tse2.mm.bing.net/th/id/OIP.IM24T5ZQAlGULeBZdllTxgHaHu?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-//         alt="Temperature Calculator"
-//        />
-//       </div>
-//       <div className="pt-[40px]">
-//        <h6 >-TITLE</h6>
-//        <p >Temperature Calculator</p>
-//       </div>
-//       </div>
-//        </a>
-
-
-//        </div>
-
-//       <div className='w-[25%] relative block group  bg-gray-100 px-[60px] pt-[60px] pb-[60px] overflow-hidden'>
-//            <a href="https://ak.picdn.net/shutterstock/videos/1064188900/thumb/1.jpg">
-//        <div className="absolute inset-0 bg-[#df7e69] opacity-20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-out z-10"/>
-//        <div className="relative z-20">
-//        <div className="flex justify-center">
-//         <img
-//         src="https://ak.picdn.net/shutterstock/videos/1064188900/thumb/1.jpg"
-//         alt="Temperature Calculator"
-//         className="w-[236px] h-[236px] rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
-//         />
-//        </div>
-//        <div className="pt-[40px]">
-//         <h6 className="text-gray-700 font-bold text-[12px] font-league">-TITLE</h6>
-//          <p className="text-[#1c1d25] text-[18px] font-semibold font-libre">Sonic-Tap</p>
-//        </div>
-//        </div>
-//           </a>
-//       </div>
-
-//       <div className='w-[25%] relative block group  bg-gray-100 px-[60px] pt-[60px] pb-[60px] overflow-hidden'>
-//   <a href="https://your-project-url.com">
-//   <div className="absolute inset-0 bg-[#df7e69] opacity-20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-out z-10"/>
-//   <div className="relative z-20">
-//     <div className="flex justify-center">
-//       <img
-//         src="https://global-uploads.webflow.com/618fa90c201104b94458e1fb/64feb619fc785789d5479c9c_react-practical-exercises-%26-coding-challenges_OG-Image.jpg"
-//         alt="Temperature Calculator"
-//         className="w-[236px] h-[236px] rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
-//       />
-//     </div>
-//     <div className="pt-[40px]">
-//       <h6 className="text-gray-700 font-bold text-[12px] font-league">-TITLE</h6>
-//       <p className="text-[#1c1d25] text-[18px] font-semibold font-libre">Promise challenge</p>
-//     </div>
-//   </div>
-// </a>
-//       </div>
-
-//       <div className='w-[25%] relative block group  bg-gray-100 px-[60px] pt-[60px] pb-[60px] overflow-hidden'>
-// <a href="https://your-project-url.com" >
-//   <div
-//     className="absolute inset-0 bg-[#df7e69] opacity-20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-out z-10"
-//   />
-//   <div className="relative z-20">
-//     <div className="flex justify-center">
-//       <img
-//         src="https://tse1.mm.bing.net/th/id/OIP.FmxRGV1oBE8KcjhfGwEbzQHaGS?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-//         alt="Temperature Calculator"
-//         className="w-[236px] h-[236px] rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
-//       />
-//     </div>
-//     <div className="pt-[40px] ">
-//       <h6 className="text-gray-700 font-bold text-[12px] font-league">-TITLE</h6>
-//       <p className="text-[#1c1d25] text-[18px] font-semibold font-libre">CallBackHell</p>
-//     </div>
-//   </div>
-// </a>
-//      </div>
-
-//        </div> 
